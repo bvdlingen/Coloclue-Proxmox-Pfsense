@@ -1,4 +1,6 @@
-# hetzner-proxmox-pfsense
+# Coloclue-proxmox-pfsense
+
+Fork of pekare/hetznet-proxmox-pfsense
 
 I did not really like the NAT solutions recommended for Proxmox/SmartOS on Hetzner.
 The perfectionist in me wanted to have the hypervisor behind the same firewall as the VM's.
@@ -83,7 +85,7 @@ edit /etc/hosts
 reboot
 ```
 ## step 6: configure pfsense
-- Back to LARA, use 'qm terminal VMID' to connect to pfsense VM.
+- Back to IPMI, use 'qm terminal VMID' to connect to pfsense VM.
 - Finish initial setup.
   - WAN -> em0 -> v4/DHCP4: ${external_ip}/${cidr}
   - LAN -> vtnet0.11 -> v4: 10.0.11.1/24 (vlan 11 in this case)
